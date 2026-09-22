@@ -5,9 +5,8 @@ arbitrator daemon. A vote-only member of a Galera cluster: it holds no
 data, just participates in quorum.
 
 Built from the same `mariadb` base image and digest as the Galera nodes in
-`homelab-core-dns`'s `roles/mariadb_galera` (self-hosted at
-git.baruah.net/priyanku/homelab-core-dns, not public), so `garbd` and the
-nodes' `libgalera_smm` track the same `galera-4` release.
+the author's private DNS cluster config, so `garbd` and the nodes'
+`libgalera_smm` track the same `galera-4` release.
 
 Published to `ghcr.io/priyankub/galera-arbiter:latest` on every push to
 `main` (`.github/workflows/deploy.yml`), built for both `linux/amd64` and
