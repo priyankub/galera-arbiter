@@ -4,6 +4,6 @@
 # independently; if they drift, garbd and the nodes can still speak to each
 # other (the wire protocol is versioned, not tied to the packaging), but
 # keeping them matched is the point.
-FROM mariadb:11.8.9@sha256:6422478cb8e159f080fb1d8ccf65101e26fe51385787fde7d16c3b165a331f15
+FROM mariadb:11.8.9@sha256:c4124d1afa875e47f2892edf26b482fa54f796e2f342d3717a04ca091a22a9bd
 RUN apt-get update && apt-get install -y --no-install-recommends galera-arbitrator-4 && rm -rf /var/lib/apt/lists/*
 ENTRYPOINT ["garbd"]
